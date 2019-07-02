@@ -5,8 +5,7 @@ with open(r'..\data\raw\corpus_raw.csv', encoding='utf-8') as file:
     reader = csv.DictReader(file)
     for row in reader:
         text = utils.normalizer(row['SOSPECHA_DIAGNOSTICA'])
-        tokens = text.split(' ')
-        tokens = [token for token in tokens if token != '']
+        tokens = utils.tokenizer(text)
         tokens.append('<END>')
         tokens.insert(0, '<START>')
         sentence = '!#!'.join(tokens)
