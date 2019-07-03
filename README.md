@@ -1,7 +1,7 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/fvillena/medical-text-synthesizing/master?filepath=notebooks%2Fsynthesizer.ipynb)
 # Diagnostic Generator
 
-This model is trained over around 2 millions diagnostics to extract the probability distributions of word bigrams, which are groups of 2 words that appear one after the other. There are more frequent bigrams than others, for example the _bigram caries dentinaria_ is more frequent than _caries gingival_ and using these conditional probabilities we can synthesize new diagnostics that appears to be written by humans. The method used to model this process is a First Order Hidden Markov Model.
+This model is trained over around 2 millions diagnostics to extract the probability distributions of word bigrams, which are groups of 2 words that appear one after the other. There are more frequent bigrams than others, for example the bigram _caries dentinaria_ is more frequent than _caries gingival_ and using these conditional probabilities we can synthesize new diagnostics that appears to be written by humans. The method used to model this process is a First Order Hidden Markov Model.
 
 ## TODO
 Create a Second Order Hidden Markov Model extracting the probability distributions of trigrams to synthesize more realistic diagnostics.
